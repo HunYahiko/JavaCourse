@@ -14,10 +14,10 @@ public class User implements Comparable<User> {
     private Double balance;
     private LocalDate registrationDate;
     
-    public User() {
-        this.name = "";
-        this.isActive = false;
-        this.balance = 0.0;
+    public User() {}
+    
+    public User(String name) {
+        this.name = name;
     }
     
     public User(String name, boolean isActive, List<String> roles, List<String> emails,
