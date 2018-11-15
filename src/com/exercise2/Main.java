@@ -6,13 +6,12 @@ import com.exercise2.utility.ExerciseUtility;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
         List<String> fatherEmails = Arrays.asList("father@gmail.com", "father@yahoo.com", "family@gmail.com");
         List<String> motherEmails = Arrays.asList("mother@gmail.com", "mother@hotmail.com", "family@gmail.com");
-        List<String> daugtherEmails = Arrays.asList("daughter@gmail.com", "daughter@hotmail.com", "family@gmail.com");
+        List<String> daughterEmails = Arrays.asList("daughter@gmail.com", "daughter@hotmail.com", "family@gmail.com");
         List<String> sonEmails = Arrays.asList("son@gmail.com", "son@yahoo.com", "family@gmail.com");
         List<String> fatherRoles = Arrays.asList("father", "parent", "musician");
         List<String> motherRoles = Arrays.asList("mother", "parent", "baker");
@@ -22,10 +21,11 @@ public class Main {
         
         User user1 = new User("Mother", false, motherRoles, motherEmails,5000.0, LocalDate.now().plusMonths(1));
         User user2 = new User("Father", true, fatherRoles, fatherEmails, 10000.0, LocalDate.now());
-        User user3 = new User("Daughter", false, daughterRoles, daugtherEmails, 3000.0, LocalDate.now());
+        User user3 = new User("Daughter", false, daughterRoles, daughterEmails, 3000.0, LocalDate.now());
         User user4 = new User("Son", true, sonRoles, sonEmails, 2500.0, LocalDate.now().minusMonths(3));
+        User user5 = new User("Son", true, sonRoles, sonEmails, 2500.0, LocalDate.now().minusMonths(3));
         
-        List<User> users = Arrays.asList(user1, user2, user3, user4);
+        List<User> users = Arrays.asList(user1, user2, user3, user4, user5);
         UserService userService = new UserService();
         
         /*Sort distinct users*/
